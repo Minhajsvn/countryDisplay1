@@ -5,8 +5,12 @@ export default function App() {
   const [countries, setCountries] = useState([]);
 
   const fetchCountries = async () => {
-    const data = await axios.get("https://restcountries.com/v3.1/all");
-    setCountries(data.data);
+    try {
+        const data = await axios.get("https://restcountries.com/v3.1/all");
+        setCountries(data.data);
+    } catch (error) {
+        console.log(error);
+    }
   };
 
   const cardStyle = {
