@@ -79,13 +79,13 @@ export default function App() {
   },[searchText, countries]);
 
   return (
-    <div>
+    <>
       <div style={inputDiv}>
         <input style={inputTag} type="text" placeholder="Search for countries" onChange={handleChange} value={searchText}/>
       </div>
       <div style={divStyle}>
         {countries.map((country) => (
-          <div key={country.name.common} style={cardStyle}>
+          <div className="countryCard" key={country.name.common} style={cardStyle}>
             <img
               src={country.flags.png}
               alt={`Flags of ${country.name.common}`}
@@ -94,6 +94,6 @@ export default function App() {
           </div>
         ))}
     </div>
-    </div>
+    </>
   );
 }
