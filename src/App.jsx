@@ -90,7 +90,7 @@ export default function App() {
               src={country.flags.png}
               alt={`Flags of ${country.name.common}`}
             />
-            <h3>{country.name.common}</h3>
+            <h2>{country.name.common}</h2>
           </div>
         ))}
     </div>
